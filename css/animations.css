@@ -1,0 +1,60 @@
+
+/* Rotation Animation (Ears Spin) */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.robot-ear-left,
+.robot-ear-right {
+  animation: spin 5s linear infinite;
+}
+
+/* Blinking Animation (Eyes Disappear and Reappear) */
+@keyframes blink {
+  0%, 100% {opacity: 1;}
+  50% {opacity: 0;}
+}
+.robot-eye-left,
+.robot-eye-right {
+  animation: blink 1s infinite alternate;
+
+ 
+}
+@keyframes talk {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.5); }
+}
+.robot-teeth {
+  animation: talk 3s infinite;
+}
+
+/* Animation with movement around some position is shown */
+
+@keyframes wiggle {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+.robot-nose {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+/* Animation on object hover event is shown */
+
+.robot-hair-style:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Animation with color changing is shown */
+@keyframes eyeColorChange {
+  0% { background-color: rgb(37, 149, 37); }
+  50% { background-color:rgba(0, 0, 255, 0.502); }
+  100% { background-color: rgba(255, 0, 0, 0.274); }
+}
+
+.robot-eye-left,
+.robot-eye-right {
+  animation: eyeColorChange 5s infinite alternate;
+}
